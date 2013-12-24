@@ -15,7 +15,7 @@ int main(void)
     UCSRB=1<<TXEN; // transmitter enable
     UCSRC=1<<URSEL | 1<<UCSZ1 | 1<<UCSZ0; // 8 data bit, a stop, none parity
     UBRRH=0;
-    UBRRL=25; // for 9600 baud at 1MHz
+    UBRRL=25; // With this value, the ATMEGA8 using the internal oscillator at 8MHz get a 2400 baud rate
     
     while(1)
     {
